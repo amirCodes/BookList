@@ -9,7 +9,7 @@ class BookList extends Component {
     return (
 
       <div  className="">
-        <ul className="list-group">
+        <ul className="list-numbered">
           {this.props.books.map(book => <BookListItem key={book.id} book={book} />)}
         </ul>
       </div>

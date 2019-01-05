@@ -17,11 +17,11 @@ class BookDetail extends Component {
     return (
       <div className="main-container">
         <div className="col-md-4">
-          <img className="img-fluid mb-2" src={book.cover} alt={book.title} height="400px" width="300px" />
+          <img className="" src={book.cover} alt={book.title} height="400px" width="300px" />
         </div>
         <div className="col-md-8">
-          <h4 className="card-title">{book.title}</h4>
-          <p>Author: <i>{book.author}</i></p>
+          <h4 className="book-title">{book.title}</h4>
+          <p className="book-author">Author: <i>{book.author}</i></p>
           <p>{book.description}</p>
         </div>
       </div>

@@ -9,6 +9,17 @@ body {
 .book-list {
     display: inline-table;
 }
+
+.book-title {
+    color: blue;
+    font-weight: bolder;
+}
+
+.book-author {
+    color: darkorange;
+    font-weight: bolder;
+    font-size: large;
+}
 .list-numbered {
     list-style: none;
     margin-left: 1em;

@@ -25,8 +25,8 @@ class BookListItem extends Component {
           <img className="d-flex mr-3" width="64" src={book.cover} alt={book.title} />
 
           <div className="media-body" style={{lineHeight: 1.2}}>
-            <h6 className="mt-0 mb-1">{book.title}</h6>
-            <span className="small" title={book.description}>
+            <h6 className="book-title">{book.title}</h6>
+            <span className=" " title={book.description}>
             {truncatedDescription}
           </span>
           </div>
