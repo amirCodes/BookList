@@ -15,17 +15,14 @@ class BookDetail extends Component {
     }
 
     return (
-      <div className="row">
+      <div className="main-container">
         <div className="col-md-4">
-          <img className="img-fluid mb-2" src={book.cover} alt={book.title} />
+          <img className="img-fluid mb-2" src={book.cover} alt={book.title} height="400px" width="300px" />
         </div>
         <div className="col-md-8">
           <h4 className="card-title">{book.title}</h4>
-          <p>by <a href="#">{book.author}</a></p>
+          <p>Author: <i>{book.author}</i></p>
           <p>{book.description}</p>
-          <a href="#" className="btn btn-primary">
-            Add to cart <small>(${book.price})</small>
-          </a>
         </div>
       </div>
     );

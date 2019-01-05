@@ -2,13 +2,17 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import BookListItem from './BookListItem';
+import '../styles/main.css'
 
 class BookList extends Component {
   render() {
     return (
-      <ul className="list-group">
-        {this.props.books.map(book => <BookListItem key={book.id} book={book} />)}
-      </ul>
+
+      <div  className="">
+        <ul className="list-group">
+          {this.props.books.map(book => <BookListItem key={book.id} book={book} />)}
+        </ul>
+      </div>
     );
   }
 }

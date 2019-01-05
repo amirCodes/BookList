@@ -1,0 +1,37 @@
+body {
+    color: #333;
+    font: 16px/1 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.main-container {
+    padding: 5%;
+    background-color: lightgray;
+}
+.book-list {
+    display: inline-table;
+}
+.list-numbered {
+    list-style: none;
+    margin-left: 1em;
+    counter-reset: line;
+}
+
+.list-numbered > li {
+    display: inline-table;
+    margin-bottom: 1.5em;
+}
+
+.list-numbered > li:before {
+    position: absolute;
+    left: -2.25em;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 0.5em;
+    background-color: #B53C2C;
+    border-radius: 50%;
+    color: #fff;
+    text-align:center;
+    line-height: 1.25em;
+    counter-increment: line;
+    content: counter(line);
+}

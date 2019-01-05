@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {truncate} from 'lodash';
 import {selectBook} from '../actions/bookActions';
+import '../styles/main.css'
 
 class BookListItem extends Component {
   render() {
@@ -15,19 +16,23 @@ class BookListItem extends Component {
     const truncatedDescription = truncate(book.description, {length: 45});
 
     return (
-      <li
-        className={`list-group-item media ${activeBook && activeBook.id === book.id ? 'bg-inverse text-white' : ''}`}
-        onClick={() => selectBookProp(book)}
-        style={{cursor: 'pointer'}}>
-        <img className="d-flex mr-3" width="64" src={book.cover} alt={book.title} />
 
-        <div className="media-body" style={{lineHeight: 1.2}}>
-          <h6 className="mt-0 mb-1">{book.title}</h6>
-          <span className="small" title={book.description}>
+      <ol className="list-numbered book-list">
+        <li
+          className={`list-group-item media ${activeBook && activeBook.id === book.id ? 'bg-inverse text-white' : ''}`}
+          onClick={() => selectBookProp(book)}
+          style={{cursor: 'pointer'}}>
+          <img className="d-flex mr-3" width="64" src={book.cover} alt={book.title} />
+
+          <div className="media-body" style={{lineHeight: 1.2}}>
+            <h6 className="mt-0 mb-1">{book.title}</h6>
+            <span className="small" title={book.description}>
             {truncatedDescription}
           </span>
-        </div>
-      </li>
+          </div>
+
+        </li>
+      </ol>
     );
   }
 
